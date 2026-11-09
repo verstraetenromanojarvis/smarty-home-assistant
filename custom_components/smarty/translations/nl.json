@@ -1,0 +1,247 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "SMARTY koppelen",
+        "description": "Maak in de SMARTY-app onder Instellingen → Home Assistant een alleen-lezen token en plak die hier.",
+        "data": {
+          "host": "Server",
+          "token": "Token"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Nieuwe SMARTY-token",
+        "description": "De token is ingetrokken of niet meer geldig. Maak een nieuwe aan in de SMARTY-app.",
+        "data": {
+          "token": "Token"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "De token is ongeldig of ingetrokken.",
+      "cannot_connect": "De SMARTY-server is niet bereikbaar.",
+      "rate_limited": "Te veel verzoeken. Wacht een minuut en probeer het opnieuw.",
+      "wrong_site": "Deze token hoort bij een andere installatie."
+    },
+    "abort": {
+      "already_configured": "Deze installatie is al gekoppeld.",
+      "reauth_successful": "De token is bijgewerkt."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "solar_power": {
+        "name": "Zonnevermogen"
+      },
+      "grid_power": {
+        "name": "Netvermogen"
+      },
+      "grid_import_power": {
+        "name": "Netafname"
+      },
+      "grid_export_power": {
+        "name": "Netteruglevering"
+      },
+      "battery_power": {
+        "name": "Batterijvermogen"
+      },
+      "battery_charge_power": {
+        "name": "Batterij laadvermogen"
+      },
+      "battery_discharge_power": {
+        "name": "Batterij ontlaadvermogen"
+      },
+      "home_power": {
+        "name": "Huisverbruik"
+      },
+      "ev_power": {
+        "name": "Laadpaalvermogen"
+      },
+      "heat_pump_power": {
+        "name": "Warmtepompvermogen"
+      },
+      "battery_soc": {
+        "name": "Batterijlading"
+      },
+      "ac_power_w": {
+        "name": "AC-vermogen"
+      },
+      "pv_power_w": {
+        "name": "PV-vermogen"
+      },
+      "battery_power_w": {
+        "name": "Batterijvermogen"
+      },
+      "net_power_w": {
+        "name": "Netvermogen"
+      },
+      "ev_power_w": {
+        "name": "Laadvermogen"
+      },
+      "heat_pump_power_w": {
+        "name": "Warmtepompvermogen"
+      },
+      "load_power_w": {
+        "name": "Belastingsvermogen"
+      },
+      "heat_output_w": {
+        "name": "Warmteafgifte"
+      },
+      "battery_soc_pct": {
+        "name": "Batterijlading"
+      },
+      "daily_energy_kwh": {
+        "name": "Energie vandaag"
+      },
+      "total_energy_kwh": {
+        "name": "Totale energie"
+      },
+      "grid_import_today_kwh": {
+        "name": "Netafname vandaag"
+      },
+      "grid_export_today_kwh": {
+        "name": "Teruglevering vandaag"
+      },
+      "grid_import_total_kwh": {
+        "name": "Netafname totaal"
+      },
+      "grid_export_total_kwh": {
+        "name": "Teruglevering totaal"
+      },
+      "grid_voltage_v": {
+        "name": "Netspanning"
+      },
+      "grid_frequency_hz": {
+        "name": "Netfrequentie"
+      },
+      "grid_current_a": {
+        "name": "Netstroom"
+      },
+      "inverter_temp_c": {
+        "name": "Omvormertemperatuur"
+      },
+      "battery_temp_c": {
+        "name": "Batterijtemperatuur"
+      },
+      "water_temp_c": {
+        "name": "Watertemperatuur"
+      },
+      "flow_temp_c": {
+        "name": "Aanvoertemperatuur"
+      },
+      "return_temp_c": {
+        "name": "Retourtemperatuur"
+      },
+      "dhw_temp_c": {
+        "name": "Tapwatertemperatuur"
+      },
+      "outdoor_temp_c": {
+        "name": "Buitentemperatuur"
+      },
+      "room_temp_c": {
+        "name": "Kamertemperatuur"
+      },
+      "cop": {
+        "name": "COP"
+      },
+      "data_status": {
+        "name": "Datastatus",
+        "state": {
+          "ok": "Actueel",
+          "partial": "Deels actueel",
+          "stale": "Verouderd",
+          "no_devices": "Geen apparaten"
+        }
+      },
+      "strategy": {
+        "name": "Strategie",
+        "state": {
+          "self_consumption": "Eigen verbruik",
+          "cost_minimization": "Kostenoptimalisatie",
+          "peak_shaving": "Peak shaving",
+          "time_of_use": "Tijdstarief",
+          "grid_export": "Netexport",
+          "manual": "Handmatig",
+          "off": "Geen aansturing"
+        }
+      },
+      "cost_today": {
+        "name": "Kosten vandaag"
+      },
+      "cost_month": {
+        "name": "Kosten deze maand"
+      },
+      "self_consumption": {
+        "name": "Geschat zelfverbruik vandaag"
+      },
+      "battery_charge_total_kwh": {
+        "name": "Batterij geladen totaal"
+      },
+      "battery_discharge_total_kwh": {
+        "name": "Batterij ontladen totaal"
+      },
+      "battery_cycle_count": {
+        "name": "Batterijcycli"
+      },
+      "battery_soh_pct": {
+        "name": "Batterijgezondheid (SOH)"
+      },
+      "battery_voltage_v": {
+        "name": "Batterijspanning"
+      },
+      "battery_current_a": {
+        "name": "Batterijstroom"
+      },
+      "battery_capacity_kwh": {
+        "name": "Bruikbare capaciteit"
+      },
+      "battery_energy_remaining_kwh": {
+        "name": "Resterende energie"
+      },
+      "battery_status": {
+        "name": "Batterijstatus",
+        "state": {
+          "charging": "Laden",
+          "discharging": "Ontladen",
+          "standby": "Stand-by",
+          "sleep": "Slaap",
+          "fault": "Storing"
+        }
+      },
+      "backup_active": {
+        "name": "Noodstroom actief",
+        "state": {
+          "on": "Ja",
+          "off": "Nee"
+        }
+      },
+      "grid_mode": {
+        "name": "Netstatus",
+        "state": {
+          "on_grid": "Netgekoppeld",
+          "backup": "Noodstroom"
+        }
+      },
+      "inverter_state": {
+        "name": "Omvormerstatus",
+        "state": {
+          "wait": "Wachten",
+          "normal": "Normaal",
+          "fault": "Storing"
+        }
+      },
+      "eps_power_w": {
+        "name": "Noodstroomvermogen"
+      },
+      "eps_voltage_v": {
+        "name": "Noodstroomspanning"
+      },
+      "eps_frequency_hz": {
+        "name": "Noodstroomfrequentie"
+      },
+      "eps_output_total_kwh": {
+        "name": "Noodstroom-energie totaal"
+      }
+    }
+  }
+}

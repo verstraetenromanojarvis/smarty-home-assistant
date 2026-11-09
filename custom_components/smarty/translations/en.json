@@ -1,0 +1,247 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect SMARTY",
+        "description": "Create a read-only token in the SMARTY app under Settings → Home Assistant and paste it here.",
+        "data": {
+          "host": "Server",
+          "token": "Token"
+        }
+      },
+      "reauth_confirm": {
+        "title": "New SMARTY token",
+        "description": "The token was revoked or is no longer valid. Create a new one in the SMARTY app.",
+        "data": {
+          "token": "Token"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "The token is invalid or has been revoked.",
+      "cannot_connect": "Could not reach the SMARTY server.",
+      "rate_limited": "Too many requests. Wait a minute and try again.",
+      "wrong_site": "This token belongs to a different installation."
+    },
+    "abort": {
+      "already_configured": "This installation is already configured.",
+      "reauth_successful": "The token has been updated."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "solar_power": {
+        "name": "Solar power"
+      },
+      "grid_power": {
+        "name": "Grid power"
+      },
+      "grid_import_power": {
+        "name": "Grid import power"
+      },
+      "grid_export_power": {
+        "name": "Grid export power"
+      },
+      "battery_power": {
+        "name": "Battery power"
+      },
+      "battery_charge_power": {
+        "name": "Battery charge power"
+      },
+      "battery_discharge_power": {
+        "name": "Battery discharge power"
+      },
+      "home_power": {
+        "name": "Home consumption"
+      },
+      "ev_power": {
+        "name": "EV charging power"
+      },
+      "heat_pump_power": {
+        "name": "Heat pump power"
+      },
+      "battery_soc": {
+        "name": "Battery charge"
+      },
+      "ac_power_w": {
+        "name": "AC power"
+      },
+      "pv_power_w": {
+        "name": "PV power"
+      },
+      "battery_power_w": {
+        "name": "Battery power"
+      },
+      "net_power_w": {
+        "name": "Grid power"
+      },
+      "ev_power_w": {
+        "name": "Charging power"
+      },
+      "heat_pump_power_w": {
+        "name": "Heat pump power"
+      },
+      "load_power_w": {
+        "name": "Load power"
+      },
+      "heat_output_w": {
+        "name": "Heat output"
+      },
+      "battery_soc_pct": {
+        "name": "Battery charge"
+      },
+      "daily_energy_kwh": {
+        "name": "Energy today"
+      },
+      "total_energy_kwh": {
+        "name": "Total energy"
+      },
+      "grid_import_today_kwh": {
+        "name": "Grid import today"
+      },
+      "grid_export_today_kwh": {
+        "name": "Grid export today"
+      },
+      "grid_import_total_kwh": {
+        "name": "Grid import total"
+      },
+      "grid_export_total_kwh": {
+        "name": "Grid export total"
+      },
+      "grid_voltage_v": {
+        "name": "Grid voltage"
+      },
+      "grid_frequency_hz": {
+        "name": "Grid frequency"
+      },
+      "grid_current_a": {
+        "name": "Grid current"
+      },
+      "inverter_temp_c": {
+        "name": "Inverter temperature"
+      },
+      "battery_temp_c": {
+        "name": "Battery temperature"
+      },
+      "water_temp_c": {
+        "name": "Water temperature"
+      },
+      "flow_temp_c": {
+        "name": "Flow temperature"
+      },
+      "return_temp_c": {
+        "name": "Return temperature"
+      },
+      "dhw_temp_c": {
+        "name": "Hot water temperature"
+      },
+      "outdoor_temp_c": {
+        "name": "Outdoor temperature"
+      },
+      "room_temp_c": {
+        "name": "Room temperature"
+      },
+      "cop": {
+        "name": "COP"
+      },
+      "data_status": {
+        "name": "Data status",
+        "state": {
+          "ok": "Up to date",
+          "partial": "Partly up to date",
+          "stale": "Outdated",
+          "no_devices": "No devices"
+        }
+      },
+      "strategy": {
+        "name": "Strategy",
+        "state": {
+          "self_consumption": "Self-consumption",
+          "cost_minimization": "Cost optimisation",
+          "peak_shaving": "Peak shaving",
+          "time_of_use": "Time-of-use tariff",
+          "grid_export": "Grid export",
+          "manual": "Manual",
+          "off": "No control"
+        }
+      },
+      "cost_today": {
+        "name": "Cost today"
+      },
+      "cost_month": {
+        "name": "Cost this month"
+      },
+      "self_consumption": {
+        "name": "Estimated self-consumption today"
+      },
+      "battery_charge_total_kwh": {
+        "name": "Battery charged total"
+      },
+      "battery_discharge_total_kwh": {
+        "name": "Battery discharged total"
+      },
+      "battery_cycle_count": {
+        "name": "Battery cycles"
+      },
+      "battery_soh_pct": {
+        "name": "Battery health (SOH)"
+      },
+      "battery_voltage_v": {
+        "name": "Battery voltage"
+      },
+      "battery_current_a": {
+        "name": "Battery current"
+      },
+      "battery_capacity_kwh": {
+        "name": "Usable capacity"
+      },
+      "battery_energy_remaining_kwh": {
+        "name": "Remaining energy"
+      },
+      "battery_status": {
+        "name": "Battery status",
+        "state": {
+          "charging": "Charging",
+          "discharging": "Discharging",
+          "standby": "Standby",
+          "sleep": "Sleep",
+          "fault": "Fault"
+        }
+      },
+      "backup_active": {
+        "name": "Backup power active",
+        "state": {
+          "on": "Yes",
+          "off": "No"
+        }
+      },
+      "grid_mode": {
+        "name": "Grid status",
+        "state": {
+          "on_grid": "Grid-tied",
+          "backup": "Backup power"
+        }
+      },
+      "inverter_state": {
+        "name": "Inverter status",
+        "state": {
+          "wait": "Waiting",
+          "normal": "Normal",
+          "fault": "Fault"
+        }
+      },
+      "eps_power_w": {
+        "name": "Backup output power"
+      },
+      "eps_voltage_v": {
+        "name": "Backup output voltage"
+      },
+      "eps_frequency_hz": {
+        "name": "Backup output frequency"
+      },
+      "eps_output_total_kwh": {
+        "name": "Backup output energy total"
+      }
+    }
+  }
+}
